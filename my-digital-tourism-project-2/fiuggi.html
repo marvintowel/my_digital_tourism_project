@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nl8g1fzkevHdGVE5z5nXpSTNkoeZngG6NVRdN0ETK8WAZJf2v/Vdumrx0Y/1TJWb" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-P+srVxoeHTbC6DfMQJ+QLK8zuQoQlKTc58JYnDMWZS8T+ujxMh92ePQJSktWqF8K" crossorigin=""></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.js"></script>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="city.css">
+    <link rel="stylesheet" href="prova.css">
+
+    <title>Scopri il Lazio - Fiuggi</title>
+</head>
+
+<body>
+    <!-- barra di navigazione -->
+    <div class="p-3 mb-2 bg-transparent text-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Località</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="Montecompatri.html">Montecompatri</a></li>
+                                <li><a class="dropdown-item active" href="Fiuggi.html">Fiuggi</a></li>
+                                <li><a class="dropdown-item" href="Paliano.html">Paliano</a></li>
+                                <li><a class="dropdown-item" href="Segni.html">Segni</a></li>
+                                <li><a class="dropdown-item" href="Genazzano.html">Genazzano</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="itinerario.html"><strong>Itinerario</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff.html"><strong>Chi siamo</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html"><strong>Feedback</strong></a>
+                        </li>
+                        <li class="nav-item" class="right">
+                            <a class="nav-link" href="chat-bot.html"><strong>Aiuto</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    </div>
+
+<!-- nome e info città-->
+    <div class="central">
+        <div class="container text-center">
+           <h1 class="display-1"><i><b>Fiuggi</b></i></h1>
+        </div>
+    </div>
+
+    <div class="central">
+        <div class="container text-center">
+           <i>
+                Fiuggi è una famosa località termale situata nel Lazio, nota per le sue acque curative e il suo centro storico.
+           </i>
+          <hr>
+       </div>
+    </div>
+
+    <br><br><br><br>
+
+<!-- punti di interesse -->    
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+               <img src="immagini/Fiuggi/.jpg" class="img-thumbnail" alt="...">
+
+                <button type="button" class="btn btn-outline-light" data-bs-target="#staticBackdrop">
+                    <b>Fonte Bonifacio VIII</b> <br>
+                    <hr>
+                        <i>Una storica fonte termale famosa per le sue acque curative.</i> <br>
+                    <hr>
+                </button>
+            </div>
+
+            <div class="col">
+                <img src="immagini\fiuggi.jpg" class="img-thumbnail" alt="...">
+
+                <button type="button" class="btn btn-outline-light" data-bs-target="#staticBackdrop">
+                    <b>Lago di Canterno</b> <br>
+                    <hr>
+                        <i>Un lago naturale ideale per passeggiate e relax immersi nella natura.</i> <br>
+                    <hr>
+                </button>
+            </div>
+
+            <div class="col">
+                <img src="immagini\fiuggi.jpg" class="img-thumbnail" alt="...">
+
+                <button type="button" class="btn btn-outline-light" data-bs-target="#staticBackdrop">
+                    <b>Collegiata di San Pietro Apostolo</b> <br>
+                    <hr>
+                        <i>una chiesa del XVII secolo situata nel cuore di Fiuggi Vecchia.</i> <br>
+                    <hr>
+                </button>
+            </div>
+        </div>
+
+        <br><br>
+
+    </div>
+   
+    <br><br><br><br>
+
+<!-- informazioni città e meteo -->
+<div class="central">
+    <div class="container">
+        <h1><i>Informazioni sulla città<i></h1><br>
+    </div>
+</div>
+
+    <div class="container">
+        <br>
+        <div class="central3">
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4" class="center">
+                        <br>
+                        Coordinate: 41°48'N 13°13'E<br>
+                        Regione: Lazio<br>
+                        Provincia: Frosinone<br>
+                        <hr>
+                        Area comunale: 32,98 km²<br>
+                        Popolazione: 10 182 abitanti<br>
+                        patrono: San Biagio Vescovo e Martire<br>
+                        Sito: <a href="https://comune.fiuggi.fr.it/">www.comune.fiuggi.fr.it</a><br><br>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Meteorology</h5>
+                        
+                            <p class="card-text">
+                                <div class="col-lg-5" class="center">
+                                    <div><iframe src="https://www.3bmeteo.com/moduli_esterni/localita_1_giorno_compatto/2802/ffffff/fc9b2a/5e5e5e/ffffff/it" width=187 height=268 frameborder="0"></iframe></div><br/>
+                                </div>
+                            </p>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <br><br><br><br>
+
+<!-- ristoranti e hotel -->
+    <!-- Sezione Ristoranti 
+    <div class="central">
+        <div class="container">
+            <h2 class="text-center"><strong>Dove mangiare</strong></h2>
+            <ul>
+                <li><strong>Ristorante Sapore</strong>: cucina tradizionale ciociara e romana in un ambiente accogliente.</li>
+                <li><strong>Trattoria da Gino</strong>: piatti tipici locali con un tocco contemporaneo.</li>
+                <li><strong>Il Grifoncino</strong>: ristorante con tavoli all'aperto e specialità regionali.</li>
+            </ul>
+        </div>
+    </div>-->
+
+    <!-- Sezione Hotel 
+    <div class="central">
+        <div class="container">
+            <h2 class="text-center"><strong>Dove dormire</strong></h2>
+            <ul>
+                <li><strong>Palazzo Fiuggi</strong>: resort di lusso con centro benessere e programmi di longevità.</li>
+                <li><strong>Ambasciatori Place Hotel</strong>: hotel con spa, trattamenti benessere e cucina raffinata.</li>
+                <li><strong>Silva Hotel Splendid</strong>: struttura a 4 stelle con centro benessere immerso nel verde.</li>
+            </ul>
+        </div>
+    </div>-->
+<!-- ristoranti e hotel -->    
+<div class="central">
+    <div class="container">
+        <h1><i>Ristoranti<i></h1><br>
+    </div>
+</div>
+
+<div class="container">
+    <div>
+        <div class="central3"><br>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="immagini/Fiuggi/ristorante1.jpg" class="img-thumbnail" alt="Ristorante 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ristorante Sapore</h5>
+                            <ul class="card-text">
+                                <li>Viale Alessio Nazari, 26, Fiuggi FR</li>
+                                <li>+39 392 241 1212</li>
+                                <li>Sempre aperto</li>
+                                <li>Fascia di prezzo: €€ - €€€</li>
+                                <li>Italiano, Mediterraneo</li>
+                            </ul>
+
+                            <p class="center">
+                                <a href="https:" style="text-decoration: none;">
+                                    <button id="reservation_restaurant" class="botao-restaurante">Voglio un tavolo!</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="immagini/Fiuggi/.jpg" class="img-thumbnail" alt="Ristorante 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Ristorante </h5>
+                            <ul class="card-text">
+                                <li>Via FR</li>
+                                <li>+39 </li>
+                                <li>Sempre aperto</li>
+                                <li>Fascia di prezzo: €€ - €€€</li>
+                                <li>Italiano, Pizza</li>
+                            </ul>
+                            <br>
+                            <p class="center">
+                                <a href="https://" style="text-decoration: none;">
+                                    <button id="reservation_restaurant" class="botao-restaurante">Voglio un tavolo!</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<div class="central">
+    <div class="container">
+        <h1><i>Hotel<i></h1><br>
+    </div>
+</div>
+
+<div class="container">
+    <br>
+    <div class="central3">
+
+        <div class="card mb-3">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="immagini/Fiuggi/.jpg" height="100%" class="img-thumbnail" alt="Hotel 1">
+                </div>
+
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Hotel Fiuggi</h5>
+
+                        <p class="card-text">
+                            <ul class="simbololista">
+                                <li>Via  FR</li>
+                                <li>Situato a l'Hotel offre </li>
+                            </ul>
+                        </p>
+
+                        <p class="center">
+                            <a href="https://" style="text-decoration: none;">
+                                <button id="reservation_hotel" class="botao-hotel">Voglio vedere disponibilità!</button>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<br><br><br><br>
+
+<!-- mappa -->
+    <div class="central">
+        <div class="container">
+            <h1><i>Mappa interattiva<i></h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d20232.607480358296!2d13.20083942641831!3d41.79658810447561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132ff59c455d4875%3A0x5e99eff23fc1993c!2s03014%20Fiuggi%20FR!5e1!3m2!1sit!2sit!4v1746697938435!5m2!1sit!2sit" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    
+    <br><br><br><br>
+
+<!-- come arrivare -->
+    <div class="central">
+        <div class="container">
+            <h1><i>Come arrivare a Fiuggi<i></h1><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="central3">
+            <div class="quadri">
+                <div class="card border-success mb-3" id="cardItinerary" style="max-width: 90rem;">
+                    <div class="card-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <strong>Come arrivare in aereo</strong>
+                        </button>
+                    </div>
+                    <div class="card-body text-success accordion-collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <p class="card-text">
+                            Per raggiungere Montecompatri in aereo, puoi fare riferimento ai seguenti aeroporti:
+
+                            Aeroporto di Roma Ciampino (CIA): Questo aeroporto è servito principalmente da compagnie
+                            aeree low-cost e si trova a circa 20 km da Montecompatri. Puoi noleggiare un'auto o utilizzare
+                            un treno per raggiungere Montecompatri.
+
+                            Aeroporto di Roma Fiumicino (FCO): Conosciuto anche come Aeroporto Leonardo da Vinci, è il
+                            principale aeroporto internazionale di Roma, situato a circa 45 km da Montecompatri. Puoi
+                            noleggiare un'auto o prendere il treno Leonardo Express fino alla stazione di Roma Termini e
+                            poi prendere un treno regionale per Colle Mattia.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card border-success mb-3" id="cardItinerary" style="max-width: 90rem;">
+                    <div class="card-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Come arrivare in treno</strong>
+                        </button>
+                    </div>
+                    <div class="card-body text-success accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <p class="card-text">
+                            La stazione ferroviaria più vicina a Montecompatri è quella di Colle Mattia, situata a circa 3
+                            km da Montecompatri. Questa stazione è servita da treni regionali sulla linea
+                            Roma-Cassino-Napoli. Una volta arrivato alla stazione di Colle Mattia, puoi prendere un
+                            autobus locale per raggiungere Montecompatri.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card border-success mb-3" id="cardItinerary" style="max-width: 90rem;">
+                    <div class="card-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>Come arrivare in autobus</strong>
+                        </button>
+                    </div>
+                    <div class="card-body text-success accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <p class="card-text">
+                            Montecompatri è ben collegata in autobus con Roma e altre città vicine. Gli autobus COTRAL
+                            forniscono collegamenti frequenti da e per Roma, con diverse partenze giornaliere. La
+                            principale fermata degli autobus a Roma è la stazione Anagnina. Da qui, puoi prendere un
+                            autobus COTRAL direttamente per Montecompatri.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <br>
+    </div>
+
+    <br><br>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+<!-- barra finale -->        
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div>
+                <img src="immagini/tor vergata.png" height="30"><br><br>
+                <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

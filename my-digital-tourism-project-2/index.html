@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="city.css">
+    <link rel="stylesheet" href="prova.css">
+
+    <!-- Script necessari -->
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <title>Scopri il Lazio - Home</title>
+
+    <script>
+      let fuse = null;
+      let datiChatbot = [];
+
+      // Caricamento asincrono delle FAQ
+      async function initializeChatbot() {
+        try {
+          const response = await fetch('FAQ_Da_Inserire.json');
+          if (!response.ok) throw new Error('Network response was not ok');
+          
+          const rawData = await response.json();
+          datiChatbot = rawData.filter(item => item.domanda?.trim());
+          
+          if (datiChatbot.length === 0) {
+            throw new Error('Nessuna FAQ valida trovata nel file');
+          }
+
+          fuse = new Fuse(datiChatbot, {
+            keys: ['domanda'],
+            threshold: 0.4,
+            includeScore: true,
+            minMatchCharLength: 3
+          });
+
+          document.getElementById('messaggi-input').disabled = false;
+          document.getElementById('send-button').disabled = false;
+          
+        } catch (error) {
+          console.error('Errore inizializzazione chatbot:', error);
+          document.getElementById('chat-box').innerHTML = 
+            `<div class="message bot">Servizio chatbot temporaneamente non disponibile</div>`;
+        }
+      }
+
+      // Mostra/nascondi chat
+      function toggleChat() {
+        const container = document.getElementById('chatContainer');
+        const bottone = document.getElementById('Bottone');
+        container.style.display = 'flex';
+        bottone.style.display = 'none';
+        
+        if (!fuse) initializeChatbot();
+      }
+
+      // Gestione invio messaggi
+      function sendMessage() {
+        const input = document.getElementById('messaggi-input');
+        const messaggio = input.value.trim();
+        if (!messaggio) return;
+
+        aggiungiMessaggio(messaggio, 'user');
+        input.value = '';
+
+        if (messaggio.startsWith('/help')) {
+          gestisciComandoHelp(messaggio);
+          return;
+        }
+
+        if (!fuse) {
+          aggiungiMessaggio("Il chatbot è in fase di caricamento...", 'bot');
+          return;
+        }
+
+        setTimeout(() => {  // Simula ritardo risposta
+          const risultati = fuse.search(messaggio);
+          processaRisultati(risultati);
+        }, 500);
+      }
+
+      function gestisciComandoHelp(messaggio) {
+        const comando = messaggio.split(' ')[0];
+        const argomento = messaggio.split(' ').slice(1).join(' ').trim();
+
+        if (argomento === '') {
+          // Mostra lista categorie
+          const categorie = [...new Set(datiChatbot.map(faq => faq.categoria))];
+          const listaCategorie = categorie.map(categoria => `• ${categoria}`).join('<br>');
+          aggiungiMessaggio(`<b>Lista categorie:</b><br>${listaCategorie}<br><br>Digita <code>/help [categoria]</code> per vedere le domande.`, 'bot');
+        } else {
+          // Mostra domande per categoria
+          const domandeCategoria = datiChatbot.filter(faq => faq.categoria.toLowerCase() === argomento.toLowerCase());
+          if (domandeCategoria.length > 0) {
+            const listaDomande = domandeCategoria.map(faq => `• ${faq.domanda}`).join('<br>');
+            aggiungiMessaggio(`<b>Domande nella categoria '${argomento}':</b><br>${listaDomande}`, 'bot');
+          } else {
+            aggiungiMessaggio(`Categoria '${argomento}' non trovata.`, 'bot');
+          }
+        }
+      }
+
+      function processaRisultati(risultati) {
+        if (risultati.length > 0 && risultati[0].score < 0.2) {
+          aggiungiMessaggio(risultati[0].item.risposta, 'bot');
+        } else {
+          const suggerimenti = risultati.slice(0, 3)
+            .map(r => `• ${r.item.domanda}`)
+            .join('<br>');
+            
+          const messaggio = risultati.length > 0 ?
+            `Forse cercavi:<br>${suggerimenti}` : 
+            "Prova a riformulare la domanda o chiedi qualcos'altro";
+            
+          aggiungiMessaggio(messaggio, 'bot');
+        }
+      }
+
+      function aggiungiMessaggio(testo, tipo) {
+        const chatBox = document.getElementById('chat-box');
+        const div = document.createElement('div');
+        div.className = `message ${tipo}`;
+        div.innerHTML = testo;
+        chatBox.appendChild(div);
+        chatBox.scrollTop = chatBox.scrollHeight;
+      }
+
+      // Inizializzazione al caricamento della pagina
+      document.addEventListener('DOMContentLoaded', initializeChatbot);
+    </script>
+</head>
+
+<body>
+    <!-- Chatbot -->
+    <main>
+        <button id="Bottone" onclick="toggleChat()">CHAT BOT</button>
+
+        <div class="chat-container" id="chatContainer" style="display: none;">
+            <img src="immagini/Chatbot/Telefono.png" alt="Telefono" class="background-image">
+            <div class="chat-content">
+                <div class="Full_Icone">
+                    <div id="cerchio1">
+                        <div id="cerchio2">
+                            <div id="nome">ChatBot</div>
+                            <img id="icona" src="immagini/Chatbot/Icona.png" alt="Icona">
+                        </div>
+                    </div>
+                </div>
+                <div class="chat-box" id="chat-box"></div>
+                <div class="input-area">
+                    <input type="text" id="messaggi-input" placeholder="Digita la tua domanda..." disabled>
+                    <button onclick="sendMessage()" id="send-button" disabled>Invia</button>
+                </div>
+            </div>
+        </div>
+    </main>
+  <!-- barra di navigazione -->
+    <div class="p-3 mb-2 bg-transparent text-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page active" href="index.html"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Località</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="Fiuggi.html">Fiuggi</a></li>
+                                <li><a class="dropdown-item" href="Paliano.html">Paliano</a></li>
+                                <li><a class="dropdown-item" href="Segni.html">Segni</a></li>
+                                <li><a class="dropdown-item" href="Montecompatri.html">Montecompatri</a></li>
+                                <li><a class="dropdown-item" href="Genazzano.html">Genazzano</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="itinerario.html"><strong>Itinerario</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff.html"><strong>Chi siamo</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html"><strong>Feedback</strong></a>
+                        </li>
+                        <li class="nav-item" class="right">
+                            <a class="nav-link" href="chat-bot.html"><strong>Aiuto</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="central">
+        <div class="container text-center">
+            <h1 class="display-1"><i><b>Alla scoperta del Lazio</b></i></h1><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h2><b>vivi Fiuggi</b></h2>
+                <p>Conosciuta per le sue acque terapeutiche e i suoi splendidi parchi.</p>
+                <a href="Fiuggi.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col">
+                <h2><b>esplora Paliano</b></h2>
+                <p>Un villaggio affascinante con una ricca storia e viste mozzafiato.</p>
+                <a href="Paliano.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col">
+                <h2><b>visita Segni</b></h2>
+                <p>Famosa per i suoi siti storici e i suoi splendidi paesaggi.</p>
+                <a href="Segni.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col">
+                <h2><b>sperimenta Montecompatri</b></h2>
+                <p>Un borgo pittoresco con una cultura vivace.</p>
+                <a href="Montecompatri.html" class="btn btn-primary">Learn More</a>
+            </div>
+            <div class="col">
+                <h2><b>scopri Genazzano</b></h2>
+                <p>Noto per la sua splendida architettura e le viste panoramiche.</p>
+                <a href="Genazzano.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    </div>
+    <div class="central">
+        <div class="container text-center">
+            <h1 class="display-1">galleria</h1>
+            <div class="shadow-lg p-3 mb-5 bg-transparent rounded">
+    
+    
+        <div class="col-md-8 mx-auto">
+        
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="immagini\Fiuggi\Fiuggi.webp" alt="First slide"  height="400px">
+            <div class="carousel-caption">
+                <a href="Fiuggi.html" class="btn btn-primary">foto di Fiuggi</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="immagini\Paliano\paliano.jpg" alt="Second slide" height="400px">
+            <div class="carousel-caption">
+                <a href="Paliano.html" class="btn btn-primary">foto di Paliano</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="immagini\Segni\Segni.webp" alt="Third slide" height="400px">
+            <div class="carousel-caption">
+                <a href="Segni.html" class="btn btn-primary">foto di Segni</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="immagini\Montecompatri\Monte_Compatri.jpg" alt="fourth slide" height="400px">
+            <div class="carousel-caption">
+                <a href="Montecompatri.html" class="btn btn-primary">foto di Montecompatri</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="immagini\Genazzano\genazzano.jpg" alt="fifth slide" height="400px">
+            <div class="carousel-caption">
+                <a href="Genazzano.html" class="btn btn-primary">foto di Genazzano</a>
+            </div>
+          </div>
+          
+        </div>
+        
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <br>
+
+
+      <hr class="d-sm-none">
+    </div>
+
+
+
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div>
+                <img src="immagini/tor vergata.png" height="30"><br><br>
+                <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

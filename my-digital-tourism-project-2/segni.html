@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nl8g1fzkevHdGVE5z5nXpSTNkoeZngG6NVRdN0ETK8WAZJf2v/Vdumrx0Y/1TJWb" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-P+srVxoeHTbC6DfMQJ+QLK8zuQoQlKTc58JYnDMWZS8T+ujxMh92ePQJSktWqF8K" crossorigin=""></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.js"></script>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="city.css">
+    <link rel="stylesheet" href="prova.css">
+
+    <title>Scopri il Lazio - Segni</title>
+</head>
+
+<body>
+    <!-- barra di navigazione -->
+    <div class="p-3 mb-2 bg-transparent text-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Località</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="Montecompatri.html">Montecompatri</a></li>
+                                <li><a class="dropdown-item" href="Fiuggi.html">Fiuggi</a></li>
+                                <li><a class="dropdown-item" href="Paliano.html">Paliano</a></li>
+                                <li><a class="dropdown-item active" href="Segni.html">Segni</a></li>
+                                <li><a class="dropdown-item" href="Genazzano.html">Genazzano</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="itinerario.html"><strong>Itinerario</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff.html"><strong>Chi siamo</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html"><strong>Feedback</strong></a>
+                        </li>
+                        <li class="nav-item" class="right">
+                            <a class="nav-link" href="chat-bot.html"><strong>Aiuto</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
+    </div>
+
+<!-- nome e info città-->    
+    <div class="central">
+        <div class="container text-center">
+            <h1 class="display-1"><i><b>Segni</b></i></h1><br>
+        </div>
+    </div>
+
+    <div class="central">
+        <div class="container text-center">
+            <i>
+                Segni è un comune italiano di circa 7.000 abitanti situato nella provincia di Roma, nel Lazio.
+                È noto per il suo patrimonio storico e culturale, con numerosi monumenti e tradizioni locali.
+            </i>
+            <hr>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+<!-- punti di interesse -->    
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <img src="immagini/Segni/Monumento1.jpg" class="img-thumbnail" alt="...">
+
+                <button type="button" class="btn btn-outline-light" data-bs-target="#staticBackdrop">
+                    <b>MONUMENTO STORICO</b> <br>
+                    <hr>
+                    <i>Questo monumento rappresenta un'importante testimonianza della storia di Segni e offre una vista panoramica sulla valle.</i> <br>
+                    <hr>
+                </button>
+            </div>
+
+            <div class="col">
+                <img src="immagini/Segni/Fonte.jpg" class="img-thumbnail" alt="...">
+
+                <button type="button" class="btn btn-outline-light" data-bs-target="#staticBackdrop">
+                    <b>FONTE DELLA SALUTE</b> <br>
+                    <hr>
+                    <i>La Fonte della Salute è famosa per le sue acque minerali, considerate benefiche per la salute.</i> <br>
+                    <hr>
+                </button>
+            </div>
+
+            <div class="col">
+                <img src="immagini/Segni/Natura.jpg" class="img-thumbnail" alt="...">
+
+                <button type="button" class="btn btn-outline-light" data-bs-target="#staticBackdrop">
+                    <b>AREA NATURALE</b> <br>
+                    <hr>
+                    <i>Questa area naturale è ideale per escursioni e passeggiate, immersi nella bellezza della natura.</i> <br>
+                    <hr>
+                </button>
+            </div>
+        </div>
+
+        <br><br>
+
+    </div>
+
+    <br><br><br><br>
+
+<!-- informazioni città e meteo -->    
+    <div class="central">
+        <div class="container">
+            <h1><i>Informazioni sulla città<i></h1><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="central3">
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4" class="center">
+                        <br>
+                        Coordinate: 41°41'N 13°01'E<br>
+                        Regione: Lazio<br>
+                        Provincia: Roma<br>
+                        <hr>
+                        Area comunale: 60,86 km²<br>
+                        Popolazione: 8 956 abitanti<br>
+                        patrono: San Bruno di Segni<br>
+                        Sito: <a href="https://www.comune.segni.rm.it/">www.comune.segni.rm.it</a><br><br>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Meteorology</h5>
+                            
+                            <p class="card-text">
+                                <div class="col-lg-5" class="center">
+                                    <div><iframe src="https://www.3bmeteo.com/moduli_esterni/localita_1_giorno_compatto/6766/ffffff/fc9b2a/5e5e5e/ffffff/it" width=187 height=268 frameborder="0"></iframe></div><br/>
+                                </div>
+                            </p>	
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+
+    <br><br><br><br>
+
+ <!-- ristoranti e hotel-->
+    <div class="central">
+        <div class="container">
+            <h1><i>Ristoranti<i></h1><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <div>
+            <div class="central3"><br>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="immagini/Segni/Ristorante1.jpg" class="img-thumbnail" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">RISTORANTE TRADIZIONALE</h5>
+                                <ul class="card-text">
+                                    <li>Via Roma, 1, 00030 Segni RM</li>
+                                    <li>+39 06 1234567</li>
+                                    <li>Sempre aperto</li>
+                                    <li>Fascia di prezzo: €€ - €€€</li>
+                                    <li>Cucina italiana, tradizionale</li>
+                                </ul>
+
+                                <p class="center">
+                                    <a href="https://www.ristorante-tradizionale.com/" style="text-decoration: none;">
+                                        <button id="reservation_restaurant" class="botao-restaurante">Voglio un tavolo!</button>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="immagini/Segni/Ristorante2.jpg" class="img-thumbnail" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">RISTORANTE GUSTO</h5>
+                                <ul class="card-text">
+                                    <li>Via delle Stelle, 2, 00030 Segni RM</li>
+                                    <li>+39 06 7654321</li>
+                                    <li>Sempre aperto</li>
+                                    <li>Fascia di prezzo: €€ - €€€</li>
+                                    <li>Cucina italiana, pizza</li>
+                                </ul>
+                                <br>
+                                <p class="center">
+                                    <a href="https://www.ristorante-gusto.com/"
+                                        style="text-decoration: none;">
+                                        <button id="reservation_restaurant" class="botao-restaurante">Voglio un tavolo!</button>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="central">
+        <div class="container">
+            <h1><i>Hotel<i></h1><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="central3">
+
+            <div class="card mb-3">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="immagini/Segni/Hotel1.jpg" width="100%" class="img-thumbnail" alt="...">
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">HOTEL SEGNI</h5>
+
+                            <p class="card-text">
+                                <ul class="simbololista">
+                                    <li>Via delle Rose, 3, 00030 Segni RM</li>
+                                    <li>Situato a Segni, l'Hotel Segni offre un centro benessere e una piscina all'aperto.</li>
+                                </ul>
+                            </p>
+
+                            <p class="center">
+                                <a href="https://www.booking.com/hotel/it/hotel-Segni.it.html"
+                                    style="text-decoration: none;">
+                                    <button id="reservation_hotel" class="botao-hotel">Voglio vedere disponibilità!</button>
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+ <!-- mappa -->
+    <div class="central">
+        <div class="container">
+            <h1><i>Mappa interattiva<i></h1><br>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d81059.06902529509!2d12.92024200615089!3d41.69461610603845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132564d83867c34f%3A0x4094f9ab239bd60!2s00037%20Segni%20RM!5e1!3m2!1sit!2sit!4v1746698816878!5m2!1sit!2sit" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+<!-- come arrivare -->
+    <div class="central">
+        <div class="container">
+            <h1><i>Come arrivare a Segni<i></h1><br>
+        </div>
+    </div>
+
+    <div class="container">
+        <br>
+        <div class="central3">
+            <div class="quadri">
+                <div class="card border-success mb-3" id="cardItinerary" style="max-width: 90rem;">
+                    <div class="card-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <strong>Come arrivare in aereo</strong>
+                        </button>
+                    </div>
+                    <div class="card-body text-success accordion-collapse" id="collapseOne" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <p class="card-text">
+                            Per raggiungere Segni in aereo, puoi fare riferimento ai seguenti aeroporti:
+
+                            Aeroporto di Roma Ciampino (CIA): Questo aeroporto è servito principalmente da compagnie aeree low-cost e si trova a circa 30 km da Segni. Puoi noleggiare un'auto o utilizzare un treno per raggiungere Segni.
+
+                            Aeroporto di Roma Fiumicino (FCO): Conosciuto anche come Aeroporto Leonardo da Vinci, è il principale aeroporto internazionale di Roma, situato a circa 50 km da Segni. Puoi noleggiare un'auto o prendere il treno per Roma e poi un autobus per Segni.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card border-success mb-3" id="cardItinerary" style="max-width: 90rem;">
+                    <div class="card-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Come arrivare in treno</strong>
+                        </button>
+                    </div>
+                    <div class="card-body text-success accordion-collapse collapse" id="collapseTwo" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <p class="card-text">
+                            La stazione ferroviaria più vicina a Segni è quella di Colleferro, situata a circa 10 km da Segni. Puoi prendere un autobus locale per raggiungere Segni dalla stazione.
+                        </p>
+                    </div>
+                </div>
+    
+                <div class="card border-success mb-3" id="cardItinerary" style="max-width: 90rem;">
+                    <div class="card-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>Come arrivare in autobus</strong>
+                        </button>
+                    </div>
+                    <div class="card-body text-success accordion-collapse collapse" id="collapseThree" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <p class="card-text">
+                            Segni è ben collegata in autobus con Roma e altre città vicine. Gli autobus COTRAL offrono collegamenti frequenti da e per Roma, con diverse partenze giornaliere.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <br>
+    </div>
+
+    <br><br> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script> 
+
+<!-- barra finale -->
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div>
+                <img src="immagini/tor vergata.png" height="30"><br><br>
+                <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,97 +1,26 @@
 [
-  {
-    "categoria": "generali",
-    "domanda": "Ciao",
-    "risposta": "Ciao! Benvenuto nel nostro progetto di turismo digitale. Come posso aiutarti oggi? Per vedere la lista dei comandi disponibili, digita '/help'."
-  },
-  {
-    "categoria": "generali",
-    "domanda": "Qual è il tuo nome?",
-    "risposta": "Mi chiamo ChatBot e sono qui per fornirti informazioni utili sulle località del Lazio che puoi visitare."
-  },
-  {
-    "categoria": "generali",
-    "domanda": "Cosa posso fare in questo sito?",
-    "risposta": "Puoi scoprire informazioni su Fiuggi, Paliano, Segni, Montecompatri e Genazzano, trovare itinerari, conoscere il nostro team e lasciare un feedback."
-  },
-  {
-    "categoria": "località",
-    "domanda": "Cosa puoi dirmi su Fiuggi?",
-    "risposta": "Fiuggi è famosa per le sue acque termali con proprietà depurative e i suoi splendidi parchi. Le fonti Bonifacio VIII e Anticolana sono molto rinomate. Anche Michelangelo usò l'acqua di Fiuggi per curarsi."
-  },
-  {
-    "categoria": "località",
-    "domanda": "Quali sono le attrazioni principali di Paliano?",
-    "risposta": "Paliano offre il Palazzo Colonna, la Chiesa di Sant'Andrea Apostolo e il Monumento Naturale 'Selva di Paliano e Mola di Piscoli', un'area naturale protetta ideale per escursioni."
-  },
-  {
-    "categoria": "località",
-    "domanda": "Cosa rende speciale Segni?",
-    "risposta": "Segni è un'antica città con notevoli architetture romane e medievali, tra cui le mura poligonali. Da visitare anche la Cattedrale di Santa Maria Assunta e il Museo Archeologico."
-  },
-  {
-    "categoria": "località",
-    "domanda": "Cosa offre Monte Compatri?",
-    "risposta": "Monte Compatri è un pittoresco borgo collinare vicino Roma, con un centro storico caratteristico e viste panoramiche. Da vedere il Convento di San Silvestro e il Santuario della Madonna del Castagno."
-  },
-  {
-    "categoria": "località",
-    "domanda": "Per cosa è conosciuta Genazzano?",
-    "risposta": "Genazzano è nota per l'acquedotto medievale e il Santuario della Madonna del Buon Consiglio. Il Castello Colonna ospita mostre d’arte contemporanea."
-  },
-  {
-    "categoria": "itinerari",
-    "domanda": "Avete degli itinerari consigliati?",
-    "risposta": "Il nostro tour è pensato per famiglie e tutti gli appassionati di natura, cultura e storia. Gli itinerari sono brevi ma ricchi: partenza da Fiuggi, tappa a Segni, pranzo a Genazzano e rientro via Paliano o Monte Compatri."
-  },
-  {
-    "categoria": "eventi",
-    "domanda": "Ci sono eventi o feste tradizionali in queste località?",
-    "risposta": "Monte Compatri celebra San Giuseppe con falò e piatti tipici; Segni ospita la Sagra della Castagna in ottobre; Genazzano è famosa per l’Infiorata di luglio; Paliano organizza un Palio medievale con sfilate storiche; Fiuggi propone eventi estivi alle Terme."
-  },
-  {
-    "categoria": "feedback",
-    "domanda": "Come posso lasciare un feedback?",
-    "risposta": "Puoi lasciare il tuo feedback nella pagina dedicata, accessibile dal menu principale. Il tuo contributo è molto importante per noi!"
-  },
-  {
-    "categoria": "generali",
-    "domanda": "Come posso contattarvi?",
-    "risposta": "Puoi contattarci tramite la pagina dei feedback o tramite i contatti indicati nella pagina del nostro team."
-  },
-  {
-    "categoria": "generali",
-    "domanda": "Il sito è accessibile?",
-    "risposta": "Abbiamo cercato di rendere il sito il più accessibile possibile. Se riscontri problemi, ti preghiamo di segnalarcelo tramite la pagina dei feedback."
-  },
-  {
-    "categoria": "generali",
-    "domanda": "Posso contribuire al progetto?",
-    "risposta": "Se desideri contribuire, sentiti libero di fare un fork del repository e inviare una pull request con le tue modifiche."
-  },
-  {
-    "categoria": "logistica",
-    "domanda": "Come arrivo a queste città da Roma?",
-    "risposta": "Puoi raggiungere Fiuggi, Paliano e Segni in treno o autobus dalla stazione Termini; Monte Compatri è collegato con linee regionali Cotral; per Genazzano si trova una stazione ferroviaria sulla linea Roma-Cassino."
-  },
-  {
-    "categoria": "stagionalità",
-    "domanda": "Qual è il periodo migliore per visitare?",
-    "risposta": "La primavera (aprile-giugno) e l’inizio dell’autunno (settembre-ottobre) offrono clima mite e paesaggi fioriti o dai colori caldi, ideali per escursioni."
-  },
-  {
-    "categoria": "gastronomia",
-    "domanda": "Quali piatti tipici posso assaggiare?",
-    "risposta": "Prova la porchetta nel territorio di Segni, i cannelloni e la polenta a Fiuggi, i funghi porcini nei boschi di Paliano e i dolci a base di mandorle a Genazzano."
-  },
-  {
-    "categoria": "alloggi",
-    "domanda": "Dove posso dormire durante il tour?",
-    "risposta": "Troverai agriturismi e B&B caratteristici a Paliano e Monte Compatri; a Fiuggi ci sono hotel termali; a Genazzano e Segni diversi piccoli relais immersi nella campagna."
-  },
-  {
-    "categoria": "prezzi",
-    "domanda": "Quanto costa mediamente un itinerario di un giorno?",
-    "risposta": "Contando trasporti, pranzo e ingressi, il costo si aggira intorno ai 50–70 € a persona."
-  }
+    {
+        "categoria": "SCRIVI QUI CATEGORIA",
+        "domanda": "SCRIVI QUI DOMANDA",
+        "risposta": "SCRIVI QUI RISPOSTA"
+    },
+    {
+        "categoria": " ",
+        "domanda": " ",
+        "risposta": " "
+    },
+    {
+        "categoria": " ",
+        "domanda": " ",
+        "risposta": " "
+    },
+    {
+        "categoria": " ",
+        "domanda": " ",
+        "risposta": " "
+    }
 ]
+
+
+
+

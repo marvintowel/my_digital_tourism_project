@@ -4,11 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nl8g1fzkevHdGVE5z5nXpSTNkoeZngG6NVRdN0ETK8WAZJf2v/Vdumrx0Y/1TJWb" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-P+srVxoeHTbC6DfMQJ+QLK8zuQoQlKTc58JYnDMWZS8T+ujxMh92ePQJSktWqF8K" crossorigin=""></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.js"></script>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="home.css">
     <link rel="stylesheet" href="city.css">
-    <title>Scopri il Lazio - Chi siamo</title>
+    <link rel="stylesheet" href="prova.css">
+
+    <title>Scopri il Lazio - Montecompatri</title>
 </head>
 
 <body>
@@ -44,75 +55,22 @@
                             <a class="nav-link" href="itinerario.html"><strong>Itinerario</strong></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="staff.html"><strong>Chi siamo</strong></a>
+                            <a class="nav-link" href="staff.html"><strong>Chi siamo</strong></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="feedback.html"><strong>Feedback</strong></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="hospitality.html"><strong>Hospitality</strong></a>
-                        </li>
+                        </li>    
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
 
-    <div class="central">
-        <div class="container text-center">
-            <h1 class="display-1"><i><b>OUR TEAM</b></i></h1><br>
-        </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">...</div>
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
+        <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
     </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="card">
-                    <img src="immagini/tor_vergata.png" class="card-img-top" alt="Team Member 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome Cognome 1</h5>
-                        <p class="card-text">Ruolo: Project Manager</p>
-                        <p class="card-text">Descrizione: Breve descrizione del membro del team e delle sue responsabilità.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="immagini/tor_vergata.png" class="card-img-top" alt="Team Member 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome Cognome 2</h5>
-                        <p class="card-text">Ruolo: Developer</p>
-                        <p class="card-text">Descrizione: Breve descrizione del membro del team e delle sue responsabilità.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="immagini/tor_vergata.png" class="card-img-top" alt="Team Member 3">
-                    <div class="card-body">
-                        <h5 class="card-title">Nome Cognome 3</h5>
-                        <p class="card-text">Ruolo: Designer</p>
-                        <p class="card-text">Descrizione: Breve descrizione del membro del team e delle sue responsabilità.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <br><br>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <div>
-            <img src="immagini/tor_vergata.png" height="30"><br><br>
-            <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
-        </div>
-      </div>
-    </footer>
-</body>
-
-</html>

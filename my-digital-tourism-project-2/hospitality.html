@@ -95,17 +95,6 @@
         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
     </div>
     <!-- inserisci il tuo html con le scritte che ci vuoi mettere -->
-    <div class="central">
-        <div class="container text-center">
-            <div class="shadow-lg p-3 mb-5 bg-transparent rounded">
-                <class="lead"><i><h1>Montecompatri</h1></i> <br>
-                        <h5>Monte Compatri è un borgo dei Castelli Romani, situato su un colle di origine vulcanica a sud-est di Roma. Il centro storico, con le sue strade concentriche e le cantine scavate nel tufo, conserva un fascino autentico. La città si anima attorno a Palazzo Borghese (oggi Municipio) e alla chiesa di Santa Maria Assunta, con facciata di Carlo Rainaldi. Tra vicoli e piazzette spuntano fontane storiche come quella dell’Angelo, mentre nei dintorni si estendono boschi di castagno e percorsi geologici nel Parco Regionale dei Castelli Romani. Ogni stagione offre eventi culturali ed enogastronomici dedicati ai vini DOC e all’olio extravergine locale.</h5>
-                    </i>
-                    </b>
-                </p>
-            </div>
-        </div>
-    </div>        
 
     <div id="map" class="container"></div>
 
@@ -374,7 +363,6 @@
                         "type": "ristorante"
                     }
                 },
-//alloggio                
                 {
                     "type": "Feature",
                     "geometry": { "type": "Point", "coordinates": [12.73569, 41.82132] },
@@ -383,18 +371,10 @@
                         "description": "Villa Mina è una spaziosa villa indipendente immersa nel verde di Monte Compatri, a soli 35 km dal centro di Roma e a pochi minuti da Frascati e dal Parco dei Castelli Romani. Pensata per ospitare fino a 10 persone, dispone di cinque ampie camere da letto e quattro bagni eleganti, oltre a una cucina completamente attrezzata con forno, lavastoviglie e microonde. Il soggiorno è caratterizzato da un suggestivo camino e aria condizionata in tutti gli ambienti, mentre il Wi Fi, la TV satellitare e la lavatrice garantiscono ogni comfort moderno. All’esterno, la villa si affaccia su un parco recintato di 10 000 m², dove una piscina privata (stagionale), un pergolato ombreggiato, un’area barbecue e tavoli da pranzo all’aperto invitano al relax e alle conviviali cene sotto le stelle. Il parcheggio privato, l’accesso diretto alle strade principali e la vicinanza (4 min in auto) alla stazione di Colle Mattia rendono Villa Mina un punto di partenza ideale per esplorare le bellezze storiche e paesaggistiche dei Castelli Romani. Check in dalle 16:00 e check out entro le 10:00.",
                         "type": "house"
                     }
-                },
-                {
-                    "type": "Feature",
-                    "geometry": { "type": "Point", "coordinates": [12.72469, 41.83676] },
-                    "properties": {
-                        "name": "Casale Mattia",
-                        "description": "Casale Mattia è un’azienda vitivinicola a conduzione familiare, attiva dal 1960 sulle colline vulcaniche di Colle Mattia a Monte Compatri. Giunta alla terza generazione, pratica una coltivazione biologica certificata ICEA dal 1995, puntando su vitigni autoctoni come Malvasia di Candia, Trebbiano e Bombino. La cantina produce una gamma completa di etichette: dal Frascati DOC e Superiore DOCG al dolce Cannellino di Frascati, dagli spumanti ai rossi di carattere (Cesanese, Merlot, Shiraz) fino agli IGT Lazio Misa Bianco e Roma Rosso/Bianco. Grazie a visite guidate tra i filari e tour in cantina, accompagnati da degustazioni professionali, i visitatori scoprono i segreti della vinificazione tradizionale e possono acquistare i vini direttamente nel punto vendita di Frascati in via XX Settembre 48.",
-                        "type": "house"
-                    }
                 }
             ]
         };
+
         let pointsLayer;
         let currentLocation = 'all';
         

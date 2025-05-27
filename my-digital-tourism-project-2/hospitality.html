@@ -31,7 +31,7 @@
         #map {
             flex: 1;
             width: 100%;
-            height: 600px; /* Altezza fissa per la mappa */
+             /* Altezza fissa per la mappa */
             z-index: 0;
         }
 
@@ -110,7 +110,7 @@
                 <div class="lead"><i><h3>Genazzano</h3></i> 
                         <h6>Un luogo unico, quasi uscito da una storia di fantasia, tanto da sembrare sospeso nel tempo. In un solo posto puoi ammirare edifici rinascimentali, medievali e ancora più antichi. Notevole è anche la presenza di edifici religiosi, come il Santuario della Madre del Buon Consiglio, tornato recentemente sotto i riflettori grazie alla visita del nuovo Papa. Oltre agli edifici storici potrai passare del tempo di qualità osservando il paesaggio molto caratteristico nei suoi dintorni o assaggiando piatti di cucina tradizionale nelle osterie del posto.</h6><br>
                     </i>
-                </div>   
+                </div>  
                 <div class="lead"><i><h3>Paliano</h3></i> 
                         <h6>Paliano è un affascinante borgo medievale situato nel cuore della Ciociaria, in provincia di Frosinone, a circa 60 km da Roma. Sorge su una collina e offre una splendida vista sulla campagna della Ciociaria. Il paese ha origini antiche e conserva un centro storico ricco di fascino, con vicoli stretti, chiese storiche e palazzi nobiliari. Paliano è circondato da aree naturali suggestive e ideali per passeggiate e attività all’aperto. Il paese è noto anche per le sue tradizioni popolari, come il Palio dell’Assunta, che si tiene ad agosto con sfilate in costume e competizioni tra i rioni. </h6><br>
                     </i>
@@ -125,19 +125,18 @@
         </div>
     </div>
 
-<div id="map" class="container"></div>
+    <div id="map"></div>
 
      <script>
         // Inizializzazione mappa
         var map = L.map('map').setView([41.800, 13.150], 10);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
         // Correzione GeoJSON
         var poiData = {
             "type": "FeatureCollection",
             "features": [
-// Genazzano
-// attrazione
+                // Genazzano
+                // attrazione
                 {
                     "type": "Feature",
                     "geometry": { "type": "Point", "coordinates": [12.97094, 41.83308] },

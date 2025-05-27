@@ -2,6 +2,7 @@
 <html lang="it">
 
 <head>
+       <!-- Rimuovi i doppi include di Leaflet -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -27,41 +28,24 @@
             min-height: 100vh;
         }
 
-        #map-container {
+        #map {
             flex: 1;
             width: 80%;
-            margin: 20px auto;
+            position: center;
+            margin: 10% auto;
+            height: 600px; /* Altezza fissa per la mappa */
+            z-index: 0;
+        }
+
+        .footer {
+            z-index: 1;
             position: relative;
-        }
-
-        #map {
-            width: 100%;
-            height: 600px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.2);
-        }
-
-        
-
-        @media (max-width: 768px) {
-            #map-container {
-                width: 95%;
-                margin: 10px auto;
-            }
-            
-            #map {
-                height: 400px;
-            }
-            
-            .lead h6 {
-                font-size: 14px;
-            }
         }
     </style>
 </head>
 
 <body>
-    <!-- Navbar -->
+    <!-- barra di navigazione -->
     <div class="p-3 mb-2 bg-transparent text-dark">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
@@ -113,89 +97,47 @@
         <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">...</div>
         <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">...</div>
     </div>
-
-    <!-- Contenuto Principale -->
-    <main class="container my-4">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                <!-- Sezioni Descrittive -->
-                <section class="mb-5">
-                    <article class="card shadow mb-4">
-                        <div class="card-body">
-                            <h3 class="text-primary">Montecompatri</h3>
-                            <p class="text-muted">Monte Compatri è un borgo dei Castelli Romani, situato su un colle di origine vulcanica a sud-est di Roma. Il centro storico, con le sue strade concentriche e le cantine scavate nel tufo, conserva un fascino autentico. La città si anima attorno a Palazzo Borghese (oggi Municipio) e alla chiesa di Santa Maria Assunta, con facciata di Carlo Rainaldi. Tra vicoli e piazzette spuntano fontane storiche come quella dell’Angelo, mentre nei dintorni si estendono boschi di castagno e percorsi geologici nel Parco Regionale dei Castelli Romani. Ogni stagione offre eventi culturali ed enogastronomici dedicati ai vini DOC e all’olio extravergine locale.</p>
-                        </div>
-                    </article>
-
-                    <article class="card shadow mb-4">
-                        <div class="card-body">
-                            <h3 class="text-primary">Segni</h3>
-                            <p class="text-muted">Segni è immersa nella natura dei Monti Lepini, tra boschi di querce e castagni, ed è un ottimo punto di partenza per escursioni e passeggiate. Il clima è mite in estate e fresco in inverno, con panorami che spaziano fino alla pianura pontina. La cultura e la tradizione sono molto importanti, ed è per questo che si tramandano numerose festività cittadine, tra le quali: la sagra del Marrone Segnino: ogni autunno, si celebra la castagna tipica locale, presidio Slow Food. Eventi religiosi e storici: tra cui rievocazioni medievali e la festa patronale di San Bruno.</p>
-                        </div>
-                    </article>
-
-                    <article class="card shadow mb-4">
-                        <div class="card-body">
-                            <h3 class="text-primary">Genazzano</h3>
-                            <p class="text-muted">Un luogo unico, quasi uscito da una storia di fantasia, tanto da sembrare sospeso nel tempo. In un solo posto puoi ammirare edifici rinascimentali, medievali e ancora più antichi. Notevole è anche la presenza di edifici religiosi, come il Santuario della Madre del Buon Consiglio, tornato recentemente sotto i riflettori grazie alla visita del nuovo Papa. Oltre agli edifici storici potrai passare del tempo di qualità osservando il paesaggio molto caratteristico nei suoi dintorni o assaggiando piatti di cucina tradizionale nelle osterie del posto.</p>
-                        </div>
-                    </article>
-
-                    <article class="card shadow mb-4">
-                        <div class="card-body">
-                            <h3 class="text-primary">Paliano</h3>
-                            <p class="text-muted">Paliano è un affascinante borgo medievale situato nel cuore della Ciociaria, in provincia di Frosinone, a circa 60 km da Roma. Sorge su una collina e offre una splendida vista sulla campagna della Ciociaria. Il paese ha origini antiche e conserva un centro storico ricco di fascino, con vicoli stretti, chiese storiche e palazzi nobiliari. Paliano è circondato da aree naturali suggestive e ideali per passeggiate e attività all’aperto. Il paese è noto anche per le sue tradizioni popolari, come il Palio dell’Assunta, che si tiene ad agosto con sfilate in costume e competizioni tra i rioni. </p>
-                        </div>
-                    </article>
-
-                    <article class="card shadow mb-4">
-                        <div class="card-body">
-                            <h3 class="text-primary">Fiuggi</h3>
-                            <p class="text-muted">Fiuggi è una città termale situata nel Lazio, in provincia di Frosinone. È famosa per le sue acque minerali, conosciute fin dall’antichità per le proprietà benefiche, in particolare per la cura dei calcoli renali. Immersa nei monti Ernici, Fiuggi è anche una meta di villeggiatura, con un centro storico medievale (Fiuggi Città) e una zona più moderna (Fiuggi Fonte), dove si trovano le terme e gli hotel. La città è circondata da boschi e paesaggi collinari, ideali per il relax e le passeggiate.</p>
-                        </div>
-                    </article>
-                </section>
-                <!-- Mappa -->
-                <section id="map-container">
-                    <div id="map"></div>
-                </section>
+    <!-- inserisci il tuo html con le scritte che ci vuoi mettere -->
+    <div class="central">
+        <div class="container text-center">
+            <div class="shadow-lg p-3 mb-5 bg-transparent rounded">
+              <div class="lead"><i><h3>Montecompatri</h3></i> 
+                        <h6>Monte Compatri è un borgo dei Castelli Romani, situato su un colle di origine vulcanica a sud-est di Roma. Il centro storico, con le sue strade concentriche e le cantine scavate nel tufo, conserva un fascino autentico. La città si anima attorno a Palazzo Borghese (oggi Municipio) e alla chiesa di Santa Maria Assunta, con facciata di Carlo Rainaldi. Tra vicoli e piazzette spuntano fontane storiche come quella dell’Angelo, mentre nei dintorni si estendono boschi di castagno e percorsi geologici nel Parco Regionale dei Castelli Romani. Ogni stagione offre eventi culturali ed enogastronomici dedicati ai vini DOC e all’olio extravergine locale.</h6><br>
+                    </i>
+                </div>    
+                <div class="lead"><i><h3>Segni</h3></i> 
+                        <h6>Segni è immersa nella natura dei Monti Lepini, tra boschi di querce e castagni, ed è un ottimo punto di partenza per escursioni e passeggiate. Il clima è mite in estate e fresco in inverno, con panorami che spaziano fino alla pianura pontina. La cultura e la tradizione sono molto importanti, ed è per questo che si tramandano numerose festività cittadine, tra le quali: la sagra del Marrone Segnino: ogni autunno, si celebra la castagna tipica locale, presidio Slow Food. Eventi religiosi e storici: tra cui rievocazioni medievali e la festa patronale di San Bruno.</h6><br>
+                    </i>
+                </div>    
+                <div class="lead"><i><h3>Genazzano</h3></i> 
+                        <h6>Un luogo unico, quasi uscito da una storia di fantasia, tanto da sembrare sospeso nel tempo. In un solo posto puoi ammirare edifici rinascimentali, medievali e ancora più antichi. Notevole è anche la presenza di edifici religiosi, come il Santuario della Madre del Buon Consiglio, tornato recentemente sotto i riflettori grazie alla visita del nuovo Papa. Oltre agli edifici storici potrai passare del tempo di qualità osservando il paesaggio molto caratteristico nei suoi dintorni o assaggiando piatti di cucina tradizionale nelle osterie del posto.</h6><br>
+                    </i>
+                </div>  
+                <div class="lead"><i><h3>Paliano</h3></i> 
+                        <h6>Paliano è un affascinante borgo medievale situato nel cuore della Ciociaria, in provincia di Frosinone, a circa 60 km da Roma. Sorge su una collina e offre una splendida vista sulla campagna della Ciociaria. Il paese ha origini antiche e conserva un centro storico ricco di fascino, con vicoli stretti, chiese storiche e palazzi nobiliari. Paliano è circondato da aree naturali suggestive e ideali per passeggiate e attività all’aperto. Il paese è noto anche per le sue tradizioni popolari, come il Palio dell’Assunta, che si tiene ad agosto con sfilate in costume e competizioni tra i rioni. </h6><br>
+                    </i>
+                </div>    
+                <div class="lead"><i><h3>Fiuggi</h3></i> 
+                        <h6>Fiuggi è una città termale situata nel Lazio, in provincia di Frosinone. È famosa per le sue acque minerali, conosciute fin dall’antichità per le proprietà benefiche, in particolare per la cura dei calcoli renali. Immersa nei monti Ernici, Fiuggi è anche una meta di villeggiatura, con un centro storico medievale (Fiuggi Città) e una zona più moderna (Fiuggi Fonte), dove si trovano le terme e gli hotel. La città è circondata da boschi e paesaggi collinari, ideali per il relax e le passeggiate.</h6><br>
+                    </i>
+                    </b>
+                </p>
+                </div>    
             </div>
         </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer mt-auto">
-        <div class="container text-center">
-            <img src="immagini/tor vergata.png" alt="Logo Università" class="mb-3" style="height: 40px;">
-            <p class="text-muted" style="color: black!important; ">© Corso di Turismo Digitale 2025</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- Mappa Script -->
-    <script>
-        // Inizializzazione Mappa
-        const map = L.map('map').setView([41.800, 13.150], 10);
-
-        // Tile Layer
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '© OpenStreetMap'
-        }).addTo(map);
-
-        // Fix Dimensioni Mappa
-        setTimeout(() => map.invalidateSize(), 100);
-
-        // Funzione Icone Personalizzate
-        const createIcon = (type) => L.divIcon({
-            className: 'custom-marker',
-            iconSize: [32, 32],
-            html: `<div class="marker-${type}"></div>`
-        });
-
-        // Dati POI
-        var poiData = { 
+    </div>
+    <div class="central">
+        <div class="container text">           
+            <div class="row row-cols-1 row-cols-md-2 g-4"> 
+                <div class="col">
+                    <div class="card h-100">                       
+                        <div id="map">
+                            <script>
+        // Inizializzazione mappa
+        var map = L.map('map').setView([41.800, 13.150], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+        // Correzione GeoJSON
+        var poiData = {
             "type": "FeatureCollection",
             "features": [
                 // Genazzano
@@ -589,9 +531,8 @@
                         "type": "alloggio"
                     }
                 }
-            ] };
-
-
+            ]
+        };
         let pointsLayer;
         let currentLocation = 'all';
         
@@ -658,22 +599,10 @@
         } catch (e) {
             console.error("Errore nel caricamento dei POI:", e);
         }
-        // Aggiunta POI
-        L.geoJSON(poiData, {
-            pointToLayer: (feature, latlng) => {
-                return L.marker(latlng, {
-                    icon: createIcon(feature.properties.type)
-                });
-            },
-            onEachFeature: (feature, layer) => {
-                layer.bindPopup(`
-                    <b>${feature.properties.name}</b>
-                    <p>${feature.properties.description}</p>
-                `);
-            }
-        }).addTo(map);
 
-        // Percorso nel Comune di Genazzano (colore viola)
+// Aggiunta dei percorsi per ogni comune
+
+// Percorso nel Comune di Genazzano (colore viola)
         var routeGenazzano = [
             [41.83308, 12.97094],
             [41.83533, 12.97395],
@@ -734,5 +663,27 @@
         L.polyline(routeComuni, { color: 'yellow' }).bindPopup("Percorso tra i Comuni").addTo(map);
 
     </script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    
+
+     
+    <footer class="footer mt-auto py-3">
+        <div class="container">
+            <div>
+                <img src="immagini/tor vergata.png" height="30"><br><br>
+                <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

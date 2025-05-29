@@ -159,7 +159,7 @@
         </div>
     </main>
 
-    <!-- Footer -->
+<!-- Footer -->
     <footer class="footer mt-auto">
         <div class="container text-center">
             <img src="immagini/tor vergata.png" alt="Logo Università" class="mb-3" style="height: 40px;">
@@ -167,10 +167,10 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+<!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Mappa Script -->
+<!-- Mappa Script -->
     <script>
         // Inizializzazione Mappa
         const map = L.map('map').setView([41.800, 13.150], 10);
@@ -180,22 +180,22 @@
             attribution: '© OpenStreetMap'
         }).addTo(map);
 
-        // Fix Dimensioni Mappa
+// Fix Dimensioni Mappa
         setTimeout(() => map.invalidateSize(), 100);
 
-        // Funzione Icone Personalizzate
+// Funzione Icone Personalizzate
         const createIcon = (type) => L.divIcon({
             className: 'custom-marker',
             iconSize: [32, 32],
             html: `<div class="marker-${type}"></div>`
         });
 
-        // Dati POI
+// Dati POI
         var poiData = { 
             "type": "FeatureCollection",
             "features": [
-                // Genazzano
-                // attrazione
+// Genazzano
+// attrazione
                 {
                     "type": "Feature",
                     "geometry": { "type": "Point", "coordinates": [12.97094, 41.83308] },
@@ -475,7 +475,7 @@
                     "type": "Feature",
                     "geometry": { "type": "Point", "coordinates": [13.02394, 41.68370] },
                     "properties": {
-                        "name": "Scriccatrocco",
+                        "name": "Scroccarocco",
                         "description": "Il Ristorante Scroccarocco è un mix di professionalità e competenze messe al servizio dei suoi clienti. Ottimo pesce fresco e braceria, ma soprattutto accoglienza e ospitalità in una delle più belle e storiche località dei Monti Lepini: Segni. Tra i ristoranti più rinomati della provincia sud di Roma tra i Castelli Romani e la Ciociaria. Ampie sale per banchetti e per le vostre cerimonie, una sala inferiore particolarmente indicata per feste private, ma anche un ampio spazio all'aperto con vista panoramica. ll ristorante Scroccarocco è ben servito da un ampio parcheggio.",
                         "type": "ristorante"
                     }
@@ -492,10 +492,10 @@
 //alloggio                
                 {
                     "type": "Feature",
-                    "geometry": { "type": "Point", "coordinates": [13.04781, 41.75003] },
+                    "geometry": { "type": "Point", "coordinates": [13.01870, 41.68700] },
                     "properties": {
-                        "name": "Tenuta Terre dei Latini",
-                        "description": "La Tenuta Terre dei Latini è un agriturismo situato a Segni (RM), immerso nell'antica Valle Latina, a pochi chilometri da Roma e dalle principali attrazioni turistiche come Rainbow MagicLand e Fiuggi. La struttura è il cuore di un'azienda agricola di 30 ettari, attiva nella produzione di cereali, oliveti e frutteti, tra cui ciliegi e frutti di bosco. La tenuta offre 8 camere finemente arredate, tutte dotate di bagno privato, aria condizionata e Wi-Fi gratuito. Le camere sono disposte al piano superiore dell'edificio, originariamente un vecchio fienile, ristrutturato con cura per mantenere l'equilibrio tra modernità e tradizione. Gli ospiti possono godere di una piscina panoramica immersa in un giardino di ulivi e ciliegi, ideale per momenti di relax all'aria aperta. La struttura dispone anche di ampi spazi per attività all'aperto e un salone per la colazione, che può ospitare fino a 100-120 persone. Il ristorante aziendale offre piatti della cucina locale, preparati con ingredienti freschi e di stagione provenienti direttamente dall'azienda agricola. Gli ospiti lodano frequentemente la pulizia, la cordialità del personale e la qualità della colazione. La posizione tranquilla e la bellezza del paesaggio circostante sono altri aspetti apprezzati.",
+                        "name": "La Pace",
+                        "description": "L’Albergo Ristorante La Pace è una storica struttura a 3 stelle situata nel centro di Segni, in provincia di Roma. Fondato nel 1946, è noto per la sua lunga tradizione di ospitalità e per l’eccellenza della cucina locale. L’hotel offre camere spaziose e luminose, dotate di bagno privato, TV, aria condizionata e connessione Wi-Fi gratuita. Alcune suite includono sauna o vasca idromassaggio.",
                         "type": "alloggio"
                     }
                 },

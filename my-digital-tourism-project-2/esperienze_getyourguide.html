@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nl8g1fzkevHdGVE5z5nXpSTNkoeZngG6NVRdN0ETK8WAZJf2v/Vdumrx0Y/1TJWb" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-P+srVxoeHTbC6DfMQJ+QLK8zuQoQlKTc58JYnDMWZS8T+ujxMh92ePQJSktWqF8K" crossorigin=""></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.js"></script>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="city.css">
+    <link rel="stylesheet" href="prova.css">
+
+    <title>Viaggio sui passi di Gregorovius - Esperienze</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    .section {
+      background-color: #ffffff;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .section ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    .reviews blockquote {
+      font-style: italic;
+      color: #555;
+      border-left: 4px solid #ccc;
+      padding-left: 10px;
+      margin: 10px 0;
+    }
+    .reviews cite {
+      display: block;
+      text-align: right;
+      color: #888;
+    }
+  </style>
+</head>
+
+<body>
+    <!-- barra di navigazione -->
+    <div class="p-3 mb-2 bg-transparent text-dark">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="index.html"><strong>Home</strong></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <strong>Località</strong>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <li><a class="dropdown-item" href="Genazzano.html">Genazzano</a></li>
+                                <li><a class="dropdown-item" href="Paliano.html">Paliano</a></li>
+                                <li><a class="dropdown-item" href="Fiuggi.html">Fiuggi</a></li>
+                                <li><a class="dropdown-item" href="Segni.html">Segni</a></li>
+                                <li><a class="dropdown-item" href="Montecompatri.html">Montecompatri</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="itinerario.html"><strong>Itinerario</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="staff.html"><strong>Chi siamo</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="feedback.html"><strong>Feedback</strong></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="hospitality.html"><strong>Hospitality</strong></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="central">
+        <div class="container text-center">
+            <h1 class="display-1"><i><b>Esperienze</b></i></h1><br><br>
+
+        </div>
+    </div>
+
+
+  <h1>Monte Compatri: Tesori Spirituali e Sapori dei Castelli Romani</h1>
+
+  <div class="section">
+    <h2>Dettagli dell'Esperienza</h2>
+    <ul>
+      <li><strong>Durata:</strong> 8 ore (intera giornata)</li>
+      <li><strong>Disponibilità:</strong> Tutto l’anno</li>
+      <li><strong>Lingue:</strong> Italiano, Inglese</li>
+      <li><strong>Prezzo indicativo:</strong> €65–85 a persona (pranzo incluso)</li>
+      <li><strong>Target:</strong> Famiglie, coppie, gruppi di amici</li>
+      <li><strong>Tipo di esperienza:</strong> Culturale, gastronomica, naturalistica</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Itinerario della Giornata</h2>
+
+    <h3>1. Cattedrale di Santa Maria Assunta</h3>
+    <p>Inizia la giornata nel cuore del borgo con la visita alla chiesa madre di Monte Compatri, edificata tra il 1630 e il 1633 su progetto di Carlo Rainaldi. Ammira le opere d’arte del XVII secolo e scopri la storia legata al cardinale Scipione Borghese.</p>
+
+    <h3>2. Passeggiata nel Parco Calahorra</h3>
+    <p>Prosegui con una camminata rilassante nel Parco Calahorra, un bosco urbano noto come “La Villetta”. Luogo ideale per famiglie, offre sentieri immersi nella natura e, durante l'anno, ospita eventi come mercatini e laboratori per bambini.</p>
+
+    <h3>3. Santuario della Madonna del Castagno</h3>
+    <p>Visita il piccolo santuario del 1680, costruito in segno di devozione alla Vergine dopo che Monte Compatri fu risparmiata da un'epidemia di colera nel 1867. All’interno si trova un tronco di castagno con l’immagine della Vergine, venerata per le grazie ricevute.</p>
+
+    <h3>4. Convento e Pinacoteca di San Silvestro</h3>
+    <p>Accanto al santuario, esplora il Convento dei Padri Carmelitani, fondato nel 1604. Ospita una pinacoteca con opere del XVII secolo di scuola caravaggesca e manierista. Il convento è un luogo di ritiro spirituale immerso nella natura.</p>
+
+    <h3>5. Pranzo al Casale delle Streghe</h3>
+    <p>Goditi un pranzo tipico presso Il Casale delle Streghe, ristorante con una valutazione di 9,5 su 10 su TheFork. Il menù offre piatti della tradizione come cacciatora mista, filetto alle bacche miste e dolci artigianali. L’ambiente è caldo e accogliente, ideale per una pausa rilassante.</p>
+
+    <h3>6. Degustazione a Casale Mattia</h3>
+    <p>Concludi la giornata con una visita guidata e degustazione presso Casale Mattia, azienda vinicola biologica situata tra le colline dei Castelli Romani. Scopri le tecniche di vinificazione e assapora i vini locali accompagnati da prodotti del territorio.</p>
+  </div>
+
+  <div class="section">
+    <h2>Incluso nell'Esperienza</h2>
+    <ul>
+      <li>Guida locale certificata</li>
+      <li>Ingressi a chiese e conventi</li>
+      <li>Pranzo completo al Casale delle Streghe</li>
+      <li>Visita e degustazione a Casale Mattia</li>
+      <li>Assicurazione e assistenza</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Informazioni Utili</h2>
+    <ul>
+      <li>Indossa scarpe comode per le passeggiate</li>
+      <li>Il Santuario della Madonna del Castagno è visitabile su prenotazione (tel. 06 9485023)</li>
+      <li>Il Casale delle Streghe offre opzioni vegetariane e senza glutine</li>
+      <li>Casale Mattia è facilmente raggiungibile in auto; parcheggio disponibile</li>
+    </ul>
+  </div>
+
+  <div class="section reviews">
+    <h2>Recensioni</h2>
+    <blockquote>
+      “Una giornata perfetta tra arte, natura e buon cibo. Il Casale delle Streghe è un gioiello nascosto!”
+      <cite>— Maria L., Roma</cite>
+    </blockquote>
+    <blockquote>
+      “La visita a Casale Mattia è stata il punto forte: vini eccellenti e panorama mozzafiato.”
+      <cite>— Luca P., Milano</cite>
+    </blockquote>
+  </div>
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <div>
+            <img src="immagini/tor_vergata.png" height="30"><br><br>
+            <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
+        </div>
+      </div>
+    </footer>
+</body>
+
+</html>

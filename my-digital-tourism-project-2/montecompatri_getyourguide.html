@@ -4,158 +4,314 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nl8g1fzkevHdGVE5z5nXpSTNkoeZngG6NVRdN0ETK8WAZJf2v/Vdumrx0Y/1TJWb" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-P+srVxoeHTbC6DfMQJ+QLK8zuQoQlKTc58JYnDMWZS8T+ujxMh92ePQJSktWqF8K" crossorigin=""></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <!-- JS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.css" />
-    <script src="https://cdn.jsdelivr.net/leaflet/1.3.1/leaflet.js"></script>
-
-    <!-- CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Esperienze - Monte Compatri</title>
     
-    <link rel="stylesheet" href="style.css">
-    <title>Viaggio sui passi di Gregorovius - Esperienze</title>
-
+    <!-- Fogli di stile -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style_getyourguide.css">
 </head>
 
 <body>
-    <!-- barra di navigazione -->
-    <div class="p-3 mb-2 bg-transparent text-dark">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#">Navbar</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html"><strong>Home</strong></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <strong>Località</strong>
-                            </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <li><a class="dropdown-item" href="Genazzano.html">Genazzano</a></li>
-                                <li><a class="dropdown-item" href="Paliano.html">Paliano</a></li>
-                                <li><a class="dropdown-item" href="Fiuggi.html">Fiuggi</a></li>
-                                <li><a class="dropdown-item" href="Segni.html">Segni</a></li>
-                                <li><a class="dropdown-item" href="Montecompatri.html">Montecompatri</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="itinerario.html"><strong>Itinerario</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="staff.html"><strong>Chi siamo</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="feedback.html"><strong>Feedback</strong></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="hospitality.html"><strong>Hospitality</strong></a>
-                        </li>
-                    </ul>
+    <!-- Barra di navigazione -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fas fa-map-marked-alt me-2"></i>Viaggio sui passi di Gregorovius</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                            <i class="fas fa-map-marker-alt me-1"></i> Località
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Genazzano.html">Genazzano</a></li>
+                            <li><a class="dropdown-item" href="Paliano.html">Paliano</a></li>
+                            <li><a class="dropdown-item" href="Fiuggi.html">Fiuggi</a></li>
+                            <li><a class="dropdown-item" href="Segni.html">Segni</a></li>
+                            <li><a class="dropdown-item active" href="Montecompatri.html">Montecompatri</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="itinerario.html"><i class="fas fa-route me-1"></i> Itinerario</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="staff.html"><i class="fas fa-users me-1"></i> Chi siamo</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="feedback.html"><i class="fas fa-comment me-1"></i> Feedback</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hospitality.html"><i class="fas fa-hotel me-1"></i> Hospitality</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold">Esperienze</h1>
+            <p class="lead">Monte Compatri: Tesori Spirituali e Sapori dei Castelli Romani</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Dettagli dell'esperienza -->
+        <div class="section">
+            <h2 class="section-title">Dettagli dell'Esperienza</h2>
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="icon-box">
+                        <i class="fas fa-clock"></i>
+                        <h4>Durata</h4>
+                        <p>8 ore (intera giornata)</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="icon-box">
+                        <i class="fas fa-calendar-alt"></i>
+                        <h4>Disponibilità</h4>
+                        <p>Tutto l'anno</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="icon-box">
+                        <i class="fas fa-language"></i>
+                        <h4>Lingue</h4>
+                        <p>Italiano, Inglese</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="icon-box">
+                        <i class="fas fa-tag"></i>
+                        <h4>Prezzo</h4>
+                        <p>€65–85 a persona (pranzo incluso)</p>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary btn-lg"><i class="fas fa-calendar-check me-2"></i> Prenota Ora</button>
+            </div>
+        </div>
 
-    <div class="central">
-        <div class="container text-center">
-            <h1 class="display-1"><i><b>Esperienze</b><br>Monte Compatri: Tesori Spirituali e Sapori dei Castelli Romani</i></h1><br>
+        <!-- Itinerario della giornata -->
+        <div class="section">
+            <h2 class="section-title">Itinerario della Giornata</h2>
+            
+            <div class="experience-block">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="immagini/Montecompatri/duomo.jpg" alt="Cattedrale di Santa Maria Assunta" class="img-fluid experience-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>1. Cattedrale di Santa Maria Assunta</h3>
+                        <p>Inizia la giornata nel cuore del borgo con la visita alla chiesa madre di Monte Compatri, edificata tra il 1630 e il 1633 su progetto di Carlo Rainaldi. Ammira le opere d'arte del XVII secolo e scopri la storia legata al cardinale Scipione Borghese.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-block">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="immagini/Montecompatri/parco_calahorra.png" alt="Parco Calahorra" class="img-fluid experience-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>2. Passeggiata nel Parco Calahorra</h3>
+                        <p>Prosegui con una camminata rilassante nel Parco Calahorra, un bosco urbano noto come "La Villetta". Luogo ideale per famiglie, offre sentieri immersi nella natura e, durante l'anno, ospita eventi come mercatini e laboratori per bambini.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-block">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="immagini/Montecompatri/Santuario.jpg" alt="Santuario della Madonna del Castagno" class="img-fluid experience-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>3. Santuario della Madonna del Castagno</h3>
+                        <p>Visita il piccolo santuario del 1680, costruito in segno di devozione alla Vergine dopo che Monte Compatri fu risparmiata da un'epidemia di colera nel 1867. All'interno si trova un tronco di castagno con l'immagine della Vergine, venerata per le grazie ricevute.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-block">
+                <h3>4. Convento e Pinacoteca di San Silvestro</h3>
+                <p>Accanto al santuario, esplora il Convento dei Padri Carmelitani, fondato nel 1604. Ospita una pinacoteca con opere del XVII secolo di scuola caravaggesca e manierista. Il convento è un luogo di ritiro spirituale immerso nella natura.</p>
+            </div>
+            
+            <div class="experience-block">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="immagini/Montecompatri/ristorante3.jpg" alt="Casale delle Streghe" class="img-fluid experience-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>5. Pranzo al Casale delle Streghe</h3>
+                        <p>Goditi un pranzo tipico presso Il Casale delle Streghe, ristorante con una valutazione di 9,5 su 10 su TheFork. Il menù offre piatti della tradizione come cacciatora mista, filetto alle bacche miste e dolci artigianali. L'ambiente è caldo e accogliente, ideale per una pausa rilassante.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="experience-block">
+                <div class="row align-items-center">
+                    <div class="col-md-4">
+                        <img src="immagini/Montecompatri/casale_mattia.jpg" alt="Casale Mattia" class="img-fluid experience-img">
+                    </div>
+                    <div class="col-md-8">
+                        <h3>6. Degustazione a Casale Mattia</h3>
+                        <p>Concludi la giornata con una visita guidata e degustazione presso Casale Mattia, azienda vinicola biologica situata tra le colline dei Castelli Romani. Scopri le tecniche di vinificazione e assapora i vini locali accompagnati da prodotti del territorio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
+        <!-- Incluso nell'esperienza -->
+        <div class="section">
+            <h2 class="section-title">Incluso nell'Esperienza</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="included-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Guida locale certificata</h4>
+                            <p>Esperta conoscitrice del territorio e della sua storia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="included-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Ingressi a chiese e conventi</h4>
+                            <p>Accesso a tutti i luoghi culturali menzionati</p>
+                        </div>
+                    </div>
+                    
+                    <div class="included-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Assicurazione e assistenza</h4>
+                            <p>Copertura completa per tutta la durata dell'esperienza</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="included-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Pranzo completo</h4>
+                            <p>Menu tradizionale con prodotti locali al Casale delle Streghe</p>
+                        </div>
+                    </div>
+                    
+                    <div class="included-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Visita e degustazione</h4>
+                            <p>Tour dell'azienda vinicola con assaggi guidati</p>
+                        </div>
+                    </div>
+                    
+                    <div class="included-item">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>Materiale informativo</h4>
+                            <p>Guida cartacea e mappa dei luoghi visitati</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Informazioni utili -->
+        <div class="section">
+            <h2 class="section-title">Informazioni Utili</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-shoe-prints me-2"></i> Abbigliamento consigliato</h4>
+                        <p>Indossa scarpe comode per le passeggiate e abbigliamento adatto alla stagione.</p>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-utensils me-2"></i> Opzioni alimentari</h4>
+                        <p>Il Casale delle Streghe offre opzioni vegetariane e senza glutine su richiesta.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-calendar-alt me-2"></i> Prenotazioni</h4>
+                        <p>Il Santuario della Madonna del Castagno è visitabile su prenotazione (tel. 06 9485023).</p>
+                    </div>
+                    
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-car me-2"></i> Parcheggio</h4>
+                        <p>Casale Mattia è facilmente raggiungibile in auto con parcheggio disponibile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recensioni -->
+        <div class="section">
+            <h2 class="section-title">Cosa dicono i nostri visitatori</h2>
+            
+            <div class="review-card">
+                <blockquote>"Una giornata perfetta tra arte, natura e buon cibo. Il Casale delle Streghe è un gioiello nascosto! La guida è stata eccezionale nel raccontare la storia di questi luoghi affascinanti."</blockquote>
+                <cite>— Maria L., Roma</cite>
+            </div>
+            
+            <div class="review-card">
+                <blockquote>"La visita a Casale Mattia è stata il punto forte: vini eccellenti e panorama mozzafiato. Abbiamo apprezzato la perfetta organizzazione e la passione degli operatori per il loro territorio."</blockquote>
+                <cite>— Luca P., Milano</cite>
+            </div>
+            
+            <div class="review-card">
+                <blockquote>"Esperienza ben strutturata che combina cultura, spiritualità e gastronomia. Consigliatissimo a chi vuole scoprire i tesori nascosti dei Castelli Romani. Torneremo sicuramente!"</blockquote>
+                <cite>— Giulia R., Firenze</cite>
+            </div>
         </div>
     </div>
 
-  <h1></h1>
-
-  <div class="section">
-    <h2>Dettagli dell'Esperienza</h2>
-    <ul>
-      <li><strong>Durata:</strong> 8 ore (intera giornata)</li>
-      <li><strong>Disponibilità:</strong> Tutto l’anno</li>
-      <li><strong>Lingue:</strong> Italiano, Inglese</li>
-      <li><strong>Prezzo indicativo:</strong> €65–85 a persona (pranzo incluso)</li>
-      <li><strong>Target:</strong> Famiglie, coppie, gruppi di amici</li>
-      <li><strong>Tipo di esperienza:</strong> Culturale, gastronomica, naturalistica</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Itinerario della Giornata</h2>
-
-    <h3>1. Cattedrale di Santa Maria Assunta</h3>
-    <p>Inizia la giornata nel cuore del borgo con la visita alla chiesa madre di Monte Compatri, edificata tra il 1630 e il 1633 su progetto di Carlo Rainaldi. Ammira le opere d’arte del XVII secolo e scopri la storia legata al cardinale Scipione Borghese.</p>
-
-    <h3>2. Passeggiata nel Parco Calahorra</h3>
-    <p>Prosegui con una camminata rilassante nel Parco Calahorra, un bosco urbano noto come “La Villetta”. Luogo ideale per famiglie, offre sentieri immersi nella natura e, durante l'anno, ospita eventi come mercatini e laboratori per bambini.</p>
-
-    <h3>3. Santuario della Madonna del Castagno</h3>
-    <p>Visita il piccolo santuario del 1680, costruito in segno di devozione alla Vergine dopo che Monte Compatri fu risparmiata da un'epidemia di colera nel 1867. All’interno si trova un tronco di castagno con l’immagine della Vergine, venerata per le grazie ricevute.</p>
-
-    <h3>4. Convento e Pinacoteca di San Silvestro</h3>
-    <p>Accanto al santuario, esplora il Convento dei Padri Carmelitani, fondato nel 1604. Ospita una pinacoteca con opere del XVII secolo di scuola caravaggesca e manierista. Il convento è un luogo di ritiro spirituale immerso nella natura.</p>
-
-    <h3>5. Pranzo al Casale delle Streghe</h3>
-    <p>Goditi un pranzo tipico presso Il Casale delle Streghe, ristorante con una valutazione di 9,5 su 10 su TheFork. Il menù offre piatti della tradizione come cacciatora mista, filetto alle bacche miste e dolci artigianali. L’ambiente è caldo e accogliente, ideale per una pausa rilassante.</p>
-
-    <h3>6. Degustazione a Casale Mattia</h3>
-    <p>Concludi la giornata con una visita guidata e degustazione presso Casale Mattia, azienda vinicola biologica situata tra le colline dei Castelli Romani. Scopri le tecniche di vinificazione e assapora i vini locali accompagnati da prodotti del territorio.</p>
-  </div>
-
-  <div class="section">
-    <h2>Incluso nell'Esperienza</h2>
-    <ul>
-      <li>Guida locale certificata</li>
-      <li>Ingressi a chiese e conventi</li>
-      <li>Pranzo completo al Casale delle Streghe</li>
-      <li>Visita e degustazione a Casale Mattia</li>
-      <li>Assicurazione e assistenza</li>
-    </ul>
-  </div>
-
-  <div class="section">
-    <h2>Informazioni Utili</h2>
-    <ul>
-      <li>Indossa scarpe comode per le passeggiate</li>
-      <li>Il Santuario della Madonna del Castagno è visitabile su prenotazione (tel. 06 9485023)</li>
-      <li>Il Casale delle Streghe offre opzioni vegetariane e senza glutine</li>
-      <li>Casale Mattia è facilmente raggiungibile in auto; parcheggio disponibile</li>
-    </ul>
-  </div>
-
-  <div class="section reviews">
-    <h2>Recensioni</h2>
-    <blockquote>
-      “Una giornata perfetta tra arte, natura e buon cibo. Il Casale delle Streghe è un gioiello nascosto!”
-      <cite>— Maria L., Roma</cite>
-    </blockquote>
-    <blockquote>
-      “La visita a Casale Mattia è stata il punto forte: vini eccellenti e panorama mozzafiato.”
-      <cite>— Luca P., Milano</cite>
-    </blockquote>
-  </div>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-
-    <footer class="footer mt-auto py-3">
-      <div class="container">
-        <div>
-            <img src="immagini/tor_vergata.png" height="30"><br><br>
-            <span class="text-muted" style="color: black !important">© Corso di Turismo Digitale 2025.</span>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="text-center">
+                <img src="immagini/tor_vergata.png" height="50" alt="Università Tor Vergata">
+                <p>© Corso di Turismo Digitale 2025</p>
+            </div>
         </div>
-      </div>
     </footer>
-</body>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animazione per le sezioni
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            
+            sections.forEach(section => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(20px)';
+            });
+            
+            setTimeout(() => {
+                sections.forEach((section, index) => {
+                    setTimeout(() => {
+                        section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                        section.style.opacity = '1';
+                        section.style.transform = 'translateY(0)';
+                    }, 200 * index);
+                });
+            }, 300);
+        });
+    </script>
+</body>
 </html>

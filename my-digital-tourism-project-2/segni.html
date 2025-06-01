@@ -62,7 +62,7 @@
     </nav>
 
 <!--nome e info città-->    
-    <div class="hero" style="background-image: url('immagini/Segni/segni_panorama.jpg');"> 
+    <div class="hero" style="background-image: url('immagini/Segni/Segni.webp');"> 
         <h1>Benvenuti a Segni</h1>
     </div>
     <div class="container">
@@ -84,7 +84,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Mura Poligonali</h5>
                             <p class="card-text">Questo monumento rappresenta un'importante testimonianza della storia di Segni e offre una vista panoramica sulla valle.</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <a href="https://www.itinesegni.com/mura-poligonali.html" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Cattedrale Di Santa Maria Assunta</h5>
                             <p class="card-text">Importante luogo di culto con una ricca storia e architettura affascinante.</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <a href="https://it.wikipedia.org/wiki/Concattedrale_di_Santa_Maria_Assunta_(Segni)" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
                 </div>
@@ -104,27 +104,74 @@
                         <div class="card-body">
                             <h5 class="card-title">Museo Archeologico</h5>
                             <p class="card-text">Esposizione di reperti che raccontano la storia antica della città e del territorio circostante.</p>
-                            <a href="#" class="btn btn-primary">Scopri di più</a>
+                            <a href="https://museosegni.com/" class="btn btn-primary">Scopri di più</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-<!-- Hotel e ristoranti -->  
-        <section class="section" id="hotel">
-            <h2 class="section-title">Dove alloggiare a Segni</h2> 
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                <div class="col">
-                    <div class="card h-100">
-                        <img src="immagini/Segni/hotel1.jpg" class="card-img-top" alt="Hotel Segni">
-                        <div class="card-body">
-                            <h5 class="card-title">Hotel Segni</h5>
+        
+<!-- info città-->
+        <section class="section" id="comune-info">
+            <h2 class="section-title">Informazioni Utili sul Comune</h2> 
+            <div class="accordion" id="accordionComune">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingComuneOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseComuneOne" aria-expanded="true" aria-controls="collapseComuneOne">
+                            Informazioni Generali
+                        </button>
+                    </h2>
+                    <div id="collapseComuneOne" class="accordion-collapse collapse show" aria-labelledby="headingComuneOne"
+                        data-bs-parent="#accordionComune">
+                        <div class="card-body text-success">
                             <p class="card-text">
-                                Via Dei Cappuccini 9, Segni RM<br>
-                                Hotel a 3 stelle situato nel centro storico di Segni, offre camere confortevoli e servizi moderni.
+                                Coordinate: 41°41'N 13°01'E<br>
+                                Regione: Lazio<br>
+                                Provincia: Roma<br>
+                                <hr>
+                                Area comunale: 60,86 km²<br>
+                                Popolazione: 8 956 abitanti<br>
+                                Patrono: San Bruno di Segni<br>
+                                Sito: <a href="https://www.comune.segni.rm.it/">www.comune.segni.rm.it</a>
                             </p>
-                            <a href="https://www.tripadvisor.it/Hotel_Review-g2052412-d4542101-Reviews-Albergo_La_Pace-Segni_Province_of_Rome_Lazio.html" class="btn btn-primary">Prenota ora</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingComuneTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseComuneTwo" aria-expanded="false" aria-controls="collapseComuneTwo">
+                            Meteo
+                        </button>
+                    </h2>
+                    <div id="collapseComuneTwo" class="accordion-collapse collapse" aria-labelledby="headingComuneTwo"
+                        data-bs-parent="#accordionComune">
+                        <div class="card-body text-success">
+                            <div class="col-lg-5">
+                                <iframe src="https://www.3bmeteo.com/moduli_esterni/localita_1_giorno_compatto/6766/ffffff/fc9b2a/5e5e5e/ffffff/it" width=187 height=268 frameborder="0"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingComuneThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseComuneThree" aria-expanded="false" aria-controls="collapseComuneThree">
+                            Numeri Utili
+                        </button>
+                    </h2>
+                    <div id="collapseComuneThree" class="accordion-collapse collapse" aria-labelledby="headingComuneThree"
+                        data-bs-parent="#accordionComune">
+                        <div class="card-body text-success">
+                            <p class="card-text">
+                                Per emergenze o necessità urgenti:
+                            </p>
+                            <ul>
+                                <li>Carabinieri: 112</li>
+                                <li>Pronto Soccorso: 118</li>
+                                <li>Polizia Locale: +39 06 976 9011</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -166,67 +213,27 @@
             </div>
         </section>
 
-<!-- info città-->
-        <section class="section" id="comune-info">
-            <h2 class="section-title">Informazioni Utili sul Comune</h2> 
-            <div class="accordion" id="accordionComune">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingComuneOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseComuneOne" aria-expanded="true" aria-controls="collapseComuneOne">
-                            Informazioni Generali
-                        </button>
-                    </h2>
-                    <div id="collapseComuneOne" class="accordion-collapse collapse show" aria-labelledby="headingComuneOne"
-                        data-bs-parent="#accordionComune">
-                        <div class="card-body text-success">
-                            <p class="card-text">
-                                Coordinate: 41°41'N 13°01'E<br>
-                                Regione: Lazio<br>
-                                Provincia: Roma<br>
-                                <hr>
-                                Area comunale: 60,86 km²<br>
-                                Popolazione: 8 956 abitanti<br>
-                                Patrono: San Bruno di Segni<br>
-                                Sito: <a href="https://www.comune.segni.rm.it/">www.comune.segni.rm.it</a>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingComuneTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseComuneTwo" aria-expanded="false" aria-controls="collapseComuneTwo">
-                            Storia e Cultura
-                        </button>
-                    </h2>
-                    <div id="collapseComuneTwo" class="accordion-collapse collapse" aria-labelledby="headingComuneTwo"
-                        data-bs-parent="#accordionComune">
-                        <div class="card-body text-success">
-                            <p class="card-text">
-                                Segni vanta una storia ricca che risale all'epoca romana. Il centro storico è caratterizzato da vicoli suggestivi, chiese antiche e monumenti storici. La cultura locale è vivace, con numerose tradizioni, feste popolari ed eventi che si svolgono durante tutto l'anno.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingComuneThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapseComuneThree" aria-expanded="false" aria-controls="collapseComuneThree">
-                            Numeri Utili
-                        </button>
-                    </h2>
-                    <div id="collapseComuneThree" class="accordion-collapse collapse" aria-labelledby="headingComuneThree"
-                        data-bs-parent="#accordionComune">
-                        <div class="card-body text-success">
-                            <p class="card-text">
-                                Per emergenze o necessità urgenti:
-                            </p>
-                            <ul>
-                                <li>Carabinieri: 112</li>
-                                <li>Pronto Soccorso: 118</li>
-                                <li>Polizia Locale: +39 06 976 9011</li>
-                            </ul>
+<!-- Hotel -->  
+        <section class="section" id="hotel">
+            <h2 class="section-title">Dove alloggiare a Segni</h2> 
+            <div class="row row-cols-1 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="immagini/Segni/hotel1.jpg" class="card-img-top" alt="Hotel Segni">
+                            </div>
+                            
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hotel Segni</h5>
+                                    <p class="card-text">
+                                        Via Dei Cappuccini 9, Segni RM<br>
+                                        Hotel a 3 stelle situato nel centro storico di Segni, offre camere confortevoli e servizi moderni.
+                                    </p>
+                                    <a href="https://www.tripadvisor.it/Hotel_Review-g2052412-d4542101-Reviews-Albergo_La_Pace-Segni_Province_of_Rome_Lazio.html" class="btn btn-primary">Prenota ora</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

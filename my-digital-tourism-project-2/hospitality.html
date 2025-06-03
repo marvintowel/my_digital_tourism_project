@@ -5,60 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha384-nl8g1fzkevHdGVE5z5nXpSTNkoeZngG6NVRdN0ETK8WAZJf2v/Vdumrx0Y/1TJWb" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-P+srVxoeHTbC6DfMQJ+QLK8zuQoQlKTc58JYnDMWZS8T+ujxMh92ePQJSktWqF8K" crossorigin=""></script>
+    <!-- Include solo una versione di Leaflet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
 
-
+    <!-- CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style_localita.css">
     
+
     <title>Viaggio sui passi di Gregorovius - Hospitality</title>
 
-    <style>
-    #map-container {
-        flex: 1;
-        width: 100%; 
-        margin: 20px auto;
-        position: relative;
-    }
-
-    #map {
-        width: 100%;
-        height: 800px; 
-        border-radius: 8px;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-
-    @media (max-width: 768px) {
-        #map-container {
-            width: 100%; 
-            margin: 10px auto;
-        }
-        #map {
-            height: 500px; 
-        }
-        .lead h6 {
-            font-size: 14px;
-        }
-    }
-
-        .location-card {
-            transition: transform 0.3s ease;
-            margin-bottom: 20px;
-        }
-        
-        .location-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .card-img-top {
-            height: 200px;
-            object-fit: cover;
-        }
-    </style>
 </head>
+
 
 <body>
     <!-- Barra di navigazione -->
@@ -253,17 +212,16 @@
                 </div>
             </div>
         </section>
-    
-    
 
         <!-- Mappa -->
         <section id="map-container">
             <h2 class="section-title">Mappa delle strutture</h2>
             <div id="map"></div>
         </section>
-
     </div>
+
     
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -273,11 +231,14 @@
             </div>
         </div>
     </footer>
+    
+    
+
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
     
-    <!-- Mappa Script -->
+<!-- Mappa Script -->
     <script>
         // Inizializzazione Mappa
         const map = L.map('map').setView([41.800, 13.150], 10);
@@ -834,7 +795,8 @@
             [41.69873, 13.01634], // Segni
             [41.80619, 12.73278] // Montecompatri
         ];
-          L.polyline(routeComuni, { color: 'yellow' }).bindPopup("Percorso tra i Comuni").addTo(map);
+        L.polyline(routeComuni, { color: 'yellow' }).bindPopup("Percorso tra i Comuni").addTo(map);
+
     </script>
 </body>
 </html>

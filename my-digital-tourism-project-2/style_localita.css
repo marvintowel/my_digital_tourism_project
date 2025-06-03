@@ -79,8 +79,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Hero Section */
 .hero { /* Changed from .city-hero to .hero */
     position: relative;
-    height: 400px; /* Altezza fissa */
-    background-size: cover;
+    height: 700px; /* Altezza fissa */
+    width: 100%; /* Larghezza automatica */
+    background-size: cover; /* Copertura completa */
     background-position: center;
     color: white;
     display: flex;
